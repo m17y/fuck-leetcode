@@ -31,6 +31,6 @@ class Solution(object):
             dp[j] = max(pre+now,dp[j]) 
         print dp
         return dp[-1]
-        # TODO 需要做笔记 如何减少循环
+        # TODO 需要做笔记 如何减少循环？
 # @lc code=end
 

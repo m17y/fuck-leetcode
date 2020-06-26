@@ -1,4 +1,3 @@
-#suyf1
 the_day=$(date "+%Y-%m-%d %H:%M:%S")
 status=`git diff`
 echo ${the_day}
@@ -7,7 +6,7 @@ if [ ${#status} -eq 0 ]; then
 else
     echo "有文件有修改，开始提交文件"
     git add -A
-    git commit - am "${the_day}"
+    git commit - am "."
     git push
     echo "提交文件结束"
 fi    

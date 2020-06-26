@@ -4,7 +4,7 @@ diff = `git diff`
 echo ${the_day}
 echo ${#status}
 #if [ ${#diff} -eq 0 ]; then  
-if [[ $status =~ '尚未' ]];then
+if [[ $status =~ '干净的工作区' ]];then
     echo "最新没有 新的文件更改"  
 else
 

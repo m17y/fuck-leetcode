@@ -1,6 +1,6 @@
 the_day=$(date "+%Y-%m-%d %H:%M:%S")
 status=`git status`
-diff = `git diff`
+diff=`git diff`
 echo ${the_day}
 echo ${#status} #字符串长度
 # 判断是否包含

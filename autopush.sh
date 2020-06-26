@@ -1,6 +1,6 @@
 status=`git diff`
 echo $status
-if [ ! -n $para1 ]; then  
+if [ ! -n $status ]; then  
   echo "IS NULL"  
 else  
   echo "NOT NULL"  

@@ -1,6 +1,6 @@
 #! /bin/sh
 ## linux 下使用crontab 设置每5分钟提交一次
-## 
+## */5 * * * * cd /Users/xk/.leetcode && bash autopush.sh >> /Users/xk/log/leetcode-autopush.log
 source /etc/profile
 the_day=$(date "+%Y-%m-%d %H:%M:%S")
 status=`git status`

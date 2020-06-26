@@ -8,6 +8,7 @@ echo ${the_day}
 #获取字符串长度
 echo ${#status}
 # 判断是否包含
+
 if [[ $status =~ '干净的工作区' ]];then 
     echo "最新没有 新的文件更改"  
 else

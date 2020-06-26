@@ -1,5 +1,6 @@
 #! /bin/sh 
-source /etc/profile 
+source /etc/profile
+
 the_day=$(date "+%Y-%m-%d %H:%M:%S")
 status=`git status`
 diff=`git diff`

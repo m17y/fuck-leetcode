@@ -6,7 +6,7 @@ if [ ${#status} -eq 0 ]; then
 else
     echo "有文件有修改，开始提交文件"
     git add -A
-    git commit -am "."
+    git commit -am ". ${the_day}"
     git push
     echo "提交文件结束"
 fi    

@@ -1,6 +1,6 @@
 #! /bin/sh 
 source /etc/profile
-#test 是否提交
+
 the_day=$(date "+%Y-%m-%d %H:%M:%S")
 status=`git status`
 diff=`git diff`

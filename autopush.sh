@@ -18,4 +18,4 @@ else
     git commit -am ". ${the_day}"
     git push -u origin master
     echo "提交文件结束"
-fi    
+fi

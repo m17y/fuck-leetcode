@@ -14,7 +14,6 @@ else
     git add -A
     git commit -am ". ${the_day}"
     git push
-    
     echo ${push}
     echo "提交文件结束"
 fi    

@@ -2,6 +2,7 @@ the_day=$(date "+%Y-%m-%d %H:%M:%S")
 status=`git status`
 diff = `git diff`
 echo ${the_day}
+echo ${#status}
 #if [ ${#diff} -eq 0 ]; then  
 if [[ $status =~ '尚未' ]];then
     echo "最新没有 新的文件更改"  

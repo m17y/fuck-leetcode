@@ -15,7 +15,7 @@ class Solution(object):
         result = []
         for i in nums1:
             if i in nums2:
-                nums.pop(nums2.index())
+                nums2.pop(nums2.index(i))
                 result.append(i)
         return result
         

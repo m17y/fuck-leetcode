@@ -23,15 +23,15 @@ class Solution(object):
         while temp is not None:
             temp = temp.next
             nn+=1
-        print nn
         temp = head
-        while temp is not None:
-            if nn==n:
+        while temp:
+            print nn ,n
+            print temp.val
+            if nn==n+1:
                 temp.next=temp.next.next
-                temp.val = temp.next.val
                 break
             else:
-                n-=1
+                nn-=1
                 temp = temp.next
         print head
         return head

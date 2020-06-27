@@ -11,6 +11,8 @@ class Solution(object):
         :type digits: List[int]
         :rtype: List[int]
         """
-        return []]
+        n = int(''.join(map(str,digits)))+1
+        print n
+        return [int(i) for i in str(n)]
 # @lc code=end
 

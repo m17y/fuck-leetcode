@@ -25,6 +25,7 @@ class Solution(object):
             else:
                 digits[i] = digits[i]+next
                 next = 0
+        print digits,next
         if next == 1:
             digits.insert(0,1)
         return digits

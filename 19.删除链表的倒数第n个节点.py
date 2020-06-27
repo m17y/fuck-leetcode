@@ -24,10 +24,12 @@ class Solution(object):
             temp = temp.next
             nn+=1
         temp = head
+        if n == 1:
+            head = head.next
         while temp:
             print nn ,n
             print temp.val
-            if nn==n+1:
+            if nn==n:
                 temp.next=temp.next.next
                 break
             else:

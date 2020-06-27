@@ -18,5 +18,19 @@ class Solution(object):
         :type n: int
         :rtype: ListNode
         """
+        nn = 0
+        while head:
+            nn+=1
+        temp = head
+        while temp:
+            if nn==n:
+                temp.next=temp.next.next
+                temp.val = temp.next.val
+                break
+            else:
+                n-=1
+                temp = temp.next
+        print head
+        return head
 # @lc code=end
 

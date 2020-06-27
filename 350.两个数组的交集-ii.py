@@ -13,8 +13,6 @@ class Solution(object):
         :rtype: List[int]
         """
         result = []
-        if len(nums1)>len(nums2):
-            nums2,nums1 = nums1,nums2
         for i in nums1:
             if i in nums2:
                 result.append(i)

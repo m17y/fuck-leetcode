@@ -23,18 +23,7 @@ class Solution(object):
         while temp is not None:
             temp = temp.next
             nn+=1
-        temp = head
-        if n == 1:
-            head = head.next
-        while temp:
-            print nn ,n
-            if nn==n+1:
-                temp.next=temp.next.next
-                break
-            else:
-                nn-=1
-                temp = temp.next
-        print head
+        temp.next=temp.next.next
         return head
         # node_no = 0
         # node = head

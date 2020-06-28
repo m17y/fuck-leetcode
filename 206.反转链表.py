@@ -24,5 +24,6 @@ class Solution(object):
             pre = head
             head = tmp
         return pre
+        # TODO 递归
 # @lc code=end
 

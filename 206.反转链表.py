@@ -17,11 +17,14 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
-        pre = ListNode(None)
-        
-        while tmp.next!=None:
-            pre.next = tmp
-            tmp = tmp.next 
+        pre = None
+
+        while head:
+            tmp = head
+            tmp.next = pre
+            pre = tmp
+            head = head.next 
+        return pre.next
 
 # @lc code=end
 

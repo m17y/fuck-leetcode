@@ -18,28 +18,21 @@ class Solution(object):
         :type n: int
         :rtype: ListNode
         """
-        nn = 0
-        temp = head
-        while temp is not None:
-            temp = temp.next
-            nn+=1
-        temp.next=temp.next.next
-        return head
-        # node_no = 0
-        # node = head
-        # while node is not None:
-        #     node = node.next
-        #     node_no += 1
-        # node_no -= n + 1
+        node_no = 0
+        node = head
+        while node is not None:
+            node = node.next
+            node_no += 1
+        node_no -= n + 1
 
-        # node = head
-        # if node_no == -1:
-        #     head = head.next
-        # else:
-        #     while(node_no):
-        #         node = node.next
-        #         node_no -= 1
-        #     node.next = node.next.next
-        # return head
+        node = head
+        if node_no == -1:
+            head = head.next
+        else:
+            while(node_no):
+                node = node.next
+                node_no -= 1
+            node.next = node.next.next
+        return head
 # @lc code=end
 

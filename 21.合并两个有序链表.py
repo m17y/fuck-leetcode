@@ -21,25 +21,18 @@ class Solution(object):
         l2head = l2
         while l1:
             tmp1 = l1.next
+            tmp22 = l2
             while l2:
                 tmp2 = l2.next
-                if l1.val<l2.val:
+                if l1.val<=l2.val:
+                    l1.next = tmp2
                     l2.next = l1
-                    l2.next.next = tmp
+                    print l2
                 if l2.next==None:
                     l2.next = l1
-                l2 = tmp2  
+                l2 = tmp2
             l1 = tmp1
         return l2
-
-                    
-
-                    
-
-        while 
-            
-
-
-        
+   
 # @lc code=end
 

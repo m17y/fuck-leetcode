@@ -18,13 +18,22 @@ class Solution(object):
         :rtype: ListNode
         """
         pre =None
+        l2head = l2
         while l1:
             tmp1 = l1.next
             while l2:
-                
-                if l1.val>l2.val:
-                    pass
-                else:
+                tmp2 = l2.next
+                if l1.val<l2.val:
+                    l2.next = l1
+                    l2.next.next = tmp
+                if l2.next==None:
+                    l2.next = l1
+                l2 = tmp2  
+            l1 = tmp1
+        return l2
+
+                    
+
                     
 
         while 

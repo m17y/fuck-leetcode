@@ -17,10 +17,15 @@ class Solution(object):
         :type l2: ListNode
         :rtype: ListNode
         """
-        while l1:
-            while l2:
-               if l1.val>l2.val:
-                    
+        end1 = None
+        tmp1 = l1
+        while tmp1:
+            tmp1 = tmp1.next
+        tmp1.next = l2
+
+        while 
+            
+
 
         
 # @lc code=end

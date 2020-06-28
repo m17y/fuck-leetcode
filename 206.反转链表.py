@@ -18,13 +18,11 @@ class Solution(object):
         :rtype: ListNode
         """
         pre = None
-
         while head:
-            tmp = head
-            tmp.next = pre
-            pre = tmp
-            head = head.next 
-        return pre.next
-
+            tmp = head.next
+            head.next = pre
+            pre = head
+            head = tmp
+        return pre
 # @lc code=end
 

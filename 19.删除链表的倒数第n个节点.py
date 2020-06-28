@@ -28,8 +28,7 @@ class Solution(object):
             head = head.next
         while temp:
             print nn ,n
-            print temp.val
-            if nn==n:
+            if nn==n+1:
                 temp.next=temp.next.next
                 break
             else:

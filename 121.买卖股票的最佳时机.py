@@ -11,15 +11,17 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        result=0
-        _min=prices[0]
+        if not prices: return 0
+
+        result = 0
+        _min = prices[0]
+        _max = prices[0]
         l = len(prices)
         for i in range(1,l):
-            if prices<_min:_min = prices
+            if prices[i]<_min:_min = prices[i]
             print _min,prices[i]-_min
             result = max(result,prices[i]-_min)
         return result
-
 
 # @lc code=end
 

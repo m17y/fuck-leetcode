@@ -17,5 +17,10 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
+        result=[]
+        while head:
+            result.append(head.val)
+            head = head.next
+        return bool(result==result[::-1])
 # @lc code=end
 

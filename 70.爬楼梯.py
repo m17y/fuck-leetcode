@@ -11,6 +11,10 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        
+        # f(x)=f(x−1)+f(x−2)
+        if n==1:return 1
+        if n==2:return 2
+        return climbStairs(n-1)+climbStairs(n-2)
+
 # @lc code=end
 

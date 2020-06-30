@@ -18,15 +18,16 @@ class Solution(object):
             if len(line) != len(set(line)):
                 return False
             for no,j in enumerate(board[i]):
-                print j,cl[no]
-                if j in cl[no]:
-                    return False
-                else:
-                    cl[no].append(j)
-                if j in pl[i/3][j/3]:
-                    return False
-                else:
-                    pl[i/3][j/3].append(j)
+                if j!=".":
+                    print j,cl[no]
+                    if j in cl[no]:
+                        return False
+                    else:
+                        cl[no].append(j)
+                    if j in pl[i/3][no/3]:
+                        return False
+                    else:
+                        pl[i/3][no/3].append(j)
         return True
             
 

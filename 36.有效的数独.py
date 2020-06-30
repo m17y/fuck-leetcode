@@ -11,9 +11,13 @@ class Solution(object):
         :type board: List[List[str]]
         :rtype: bool
         """
-
+        cl = [[],[],[],[],[],[],[],[],[]]
         for i in range(9):
-            sum(i) = sum(set(i))
+            line = filter(lambda x:x!=".",board[i])
+            if sum(line) != sum(set(line)):
+                return False
+            cl
+            
 
 # @lc code=end
 

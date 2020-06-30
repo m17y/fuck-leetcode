@@ -13,11 +13,11 @@ class Solution(object):
         :rtype: List[int]
         """
         
-        l = len(target):
+        l = len(nums)
         for i in range(l):
-            d = nums - nums[i]
-            if d in mums[i+1:]:
-                return [i,nums.index(d)]
+            d = target - nums[i]
+            if d in nums[i+1:]:
+                return [i,nums[i+1:].index(d)+i+1]
         return []
 # @lc code=end
 

@@ -12,17 +12,22 @@ class Solution(object):
         :rtype: bool
         """
         cl = [[],[],[],[],[],[],[],[],[]]
-        pl = [[],[],[],[],[],[],[],[],[]] #3*3宫内只能出现一次
+        pl = [[[],[],[]],[[],[],[]],[[],[],[]]] #3*3宫内只能出现一次
         for i in range(9):
             line = filter(lambda x:x!=".",board[i])
-            if sum(line) != sum(set(line)):
+            if len(line) != len(set(line)):
                 return False
             for no,j in enumerate(board[i]):
-                if j in cl[j]:
+                print j,cl[no]
+                if j in cl[no]:
                     return False
                 else:
-                    cl[j].append(j)
-                if i%3
+                    cl[no].append(j)
+                if j in pl[i/3][j/3]:
+                    return False
+                else:
+                    pl[i/3][j/3].append(j)
+        return True
             
 
             

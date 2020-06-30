@@ -11,6 +11,8 @@ class Solution(object):
         :type board: List[List[str]]
         :rtype: bool
         """
+        # 应该是官方一次迭代方法 
+        # 但是line = filter(lambda x:x!=".",board[i]) 这一步其实可以用额外空间优化
         cl = [[],[],[],[],[],[],[],[],[]]
         pl = [[[],[],[]],[[],[],[]],[[],[],[]]] #3*3宫内只能出现一次
         for i in range(9):

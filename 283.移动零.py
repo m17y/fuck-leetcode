@@ -11,6 +11,9 @@ class Solution(object):
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
+        l = len(nums)
+        for i in range(l-1):
+            if n
         
 # @lc code=end
 

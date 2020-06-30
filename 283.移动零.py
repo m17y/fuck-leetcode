@@ -14,9 +14,12 @@ class Solution(object):
         l = len(nums)
         for i in range(l-1):
             for j in range(i+1,l):
-                if i>j:
+                if i>j and nums[i]!=0:
                     nums[i],nums[j] = nums[j],nums[i]
-                    
+                if nums[i]==0 and nums[j]!=0:
+                    nums[i],nums[j] = nums[j],nums[i]
+        return nums
+
                     
 
         

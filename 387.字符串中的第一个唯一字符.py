@@ -11,10 +11,13 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
+        s = [i for i in s]
         l = len(s)
+        if l==1:return 0
+        print l,s
         for i in range(l):
-            print s[i],s[i+1:-1]
-            if s[i] not in s[i+1]:
+            print s[i],s[i+1:]
+            if s[i] not in s[i+1:]:
                 return i
         return -1
 # @lc code=end

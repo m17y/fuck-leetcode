@@ -12,7 +12,7 @@ class Solution(object):
         :rtype: None Do not return anything, modify s in-place instead.
         """
         l = len(s)
-        half = l%2
+        half = l//2
         for i in range(half):
             s[i],s[l-1-i] = s[l-1-i],s[i]
         return s

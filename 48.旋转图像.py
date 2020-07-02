@@ -41,5 +41,7 @@ class Solution(object):
             pos1 = pos1+1
             pos2 = pos2-1
         return matrix
+        # 变形 每一个环向前移位4怎么做？？？
+        # TODO
         # @lc code=end
 

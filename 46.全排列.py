@@ -14,7 +14,7 @@ class Solution(object):
         def backtrack(first = 0):
             # 所有数都填完了
             if first == n:  
-                res.append(nums[:])
+                res.append(nums[:])#[:] deepCopy
             for i in range(first, n):
                 # 动态维护数组
                 nums[first], nums[i] = nums[i], nums[first]

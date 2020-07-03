@@ -12,6 +12,6 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        
+        return True if sorted(s)==sorted(t) else False
 # @lc code=end
 

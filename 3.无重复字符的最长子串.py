@@ -11,13 +11,13 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        dp = [1]
-        childl = [s[0]]
-        l = len(s)
+        l = 1
+        index = 0
+        childl = []
         for i in range(1,l):
             if s[i] not in childl:
                 childl.append(s[i])
-                dp[i] = max(dp[i-1],dp[i]+1)
+                l +=1
             else:
                 childl = [s[i]]
                 dp[i] = max(dp[i-1],dp[i]+1)

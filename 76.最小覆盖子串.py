@@ -15,15 +15,16 @@ class Solution(object):
         windows = []
         slen = len(s)
         for i in range(slen):
-            while s[i] in t:
+            while s[i] not in t:
+                print s[i],t
                 windows.pop(0)
                 t.remove(t.index(s[i]))
-            windows.append(i)
+            
             if len(t)==0:
                 return windows
         if len(t)!=0:
             return ""
-
+# TODO
 
 # @lc code=end
 

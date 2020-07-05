@@ -11,6 +11,16 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
+        windows=[]
+        maxlen = 0
+        l = len(s)
+        for i in range(l):
+            while s[i] in windows:
+                windows.pop(0)
+            windows.append(s[i])
+            if len(windows)>maxlen:maxlen = len(windows)
+        print windows
+        return maxlen 
         # 什么是滑动窗口？
 
         # 其实就是一个队列,比如例题中的 abcabcbb，进入这个队列（窗口）为 abc 满足题目要求，当再进入 a，队列变成了 abca，这时候不满足要求。所以，我们要移动这个队列！
@@ -36,16 +46,7 @@ class Solution(object):
         #     if cur_len > max_len:max_len = cur_len
         #     lookup.add(s[i])
         # return max_len
-        windows=[]
-        maxlen = 0
-        l = len(s)
-        for i in range(l):
-            while s[i] in windows:
-                windows.pop(0)
-            windows.append(s[i])
-            if len(windows)>maxlen:maxlen = len(windows)
-        print windows
-        return maxlen 
+
 
 # @lc code=end
 

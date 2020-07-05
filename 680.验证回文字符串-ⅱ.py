@@ -29,7 +29,7 @@ class Solution(object):
                 return checkPalindrome(low + 1, high) or checkPalindrome(low, high - 1)
         return True
 
-        # TODO 
+        # TODO 仔细了解双指针
 
 # @lc code=end
 

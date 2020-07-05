@@ -12,7 +12,7 @@ class Solution(object):
         :rtype: bool
         """
         def checkPalindrome(low, high):
-                i, j = low, high
+            i, j = low, high
             while i < j:
                 if s[i] != s[j]:
                     return False
@@ -28,6 +28,7 @@ class Solution(object):
             else:
                 return checkPalindrome(low + 1, high) or checkPalindrome(low, high - 1)
         return True
+
         # TODO 
 
 # @lc code=end

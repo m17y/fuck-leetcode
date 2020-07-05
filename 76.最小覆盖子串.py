@@ -12,6 +12,18 @@ class Solution(object):
         :type t: str
         :rtype: str
         """
-        
+        windows = []
+        slen = len(s)
+        for i in range(slen):
+            while s[i] in t:
+                windows.pop(0)
+                t.remove(t.index(s[i]))
+            windows.append(i)
+            if len(t)==0:
+                return windows
+        if len(t)!=0:
+            return ""
+
+
 # @lc code=end
 

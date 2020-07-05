@@ -21,21 +21,26 @@ class Solution(object):
 
         # 一直维持这样的队列，找出队列出现最长的长度时候，求出解！
 
-        if not s:return 0
-        left = 0
-        lookup = set()
-        n = len(s)
-        max_len = 0
-        cur_len = 0
-        for i in range(n):
-            cur_len += 1
-            while s[i] in lookup:
-                lookup.remove(s[left])
-                left += 1
-                cur_len -= 1
-            if cur_len > max_len:max_len = cur_len
-            lookup.add(s[i])
-        return max_len
+        # if not s:return 0
+        # left = 0
+        # lookup = set()
+        # n = len(s)
+        # max_len = 0
+        # cur_len = 0
+        # for i in range(n):
+        #     cur_len += 1
+        #     while s[i] in lookup:
+        #         lookup.remove(s[left])
+        #         left += 1
+        #         cur_len -= 1
+        #     if cur_len > max_len:max_len = cur_len
+        #     lookup.add(s[i])
+        # return max_len
+
+        result=[]
+        l = len(s)
+        for i in range(l):
+            
 
 # @lc code=end
 

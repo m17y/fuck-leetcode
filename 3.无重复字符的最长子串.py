@@ -36,11 +36,16 @@ class Solution(object):
         #     if cur_len > max_len:max_len = cur_len
         #     lookup.add(s[i])
         # return max_len
-
-        result=[]
+        left = 0
+        windows=[]
+        maxlen = 0
         l = len(s)
         for i in range(l):
-            
+            curlen +=1
+            while s[i] in result:
+                windows.remove(s[left])
+                left+=1
+        if len(windows)>maxlen:max
 
 # @lc code=end
 

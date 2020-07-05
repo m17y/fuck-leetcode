@@ -42,9 +42,8 @@ class Solution(object):
         for i in range(l):
             while s[i] in windows:
                 windows.pop(0)
-            if len(windows)>maxlen:maxlen = len(windows)
             windows.append(s[i])
-
+            if len(windows)>maxlen:maxlen = len(windows)
         print windows
         return maxlen 
 

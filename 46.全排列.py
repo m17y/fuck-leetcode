@@ -11,25 +11,25 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[List[int]]
         """
-        def backtrack(first = 0):
+        def dfs(first = 0,vis=[]):
             # 所有数都填完了
-            if first == n:  
+            first
+            if first > n:  
                 res.append(nums[:])#[:] deepCopy
-            for i in range(first, n):
-                # 动态维护数组
-                if (vis[i]==0){
+            for i in range(1, n):
+                print vis
+                if(vis[i]==0):
                     vis[i] = 1
-                    nums[first]
-                    nums[first], nums[i] = nums[i], nums[first]
-                # 继续递归填下一个数
-                backtrack(first + 1)
-                # 撤销操作
-                nums[first], nums[i] = nums[i], nums[first]
-                }
-        vis=[0,for i in nums]
+                    nums[first] = i
+                    # 继续递归填下一个数
+                    dfs(first + 1,vis)
+                    # 撤销操作
+                    vis[i] = 0
+                
+        vis=[0 for i in nums]
         n = len(nums)
         res = []
-        backtrack()
+        dfs(0,vis)
         return res
 
 # @lc code=end

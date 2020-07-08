@@ -17,12 +17,16 @@ class Solution(object):
                 res.append(nums[:])#[:] deepCopy
             for i in range(first, n):
                 # 动态维护数组
-                nums[first], nums[i] = nums[i], nums[first]
+                if (vis[i]==0){
+                    vis[i] = 1
+                    nums[first]
+                    nums[first], nums[i] = nums[i], nums[first]
                 # 继续递归填下一个数
                 backtrack(first + 1)
                 # 撤销操作
                 nums[first], nums[i] = nums[i], nums[first]
-        
+                }
+        vis=[0,for i in nums]
         n = len(nums)
         res = []
         backtrack()

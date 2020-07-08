@@ -13,11 +13,10 @@ class Solution(object):
         """
         def dfs(first = 0,vis=[]):
             # 所有数都填完了
-            first
-            if first > n:  
+            print first
+            if first ==n-1:  
                 res.append(nums[:])#[:] deepCopy
-            for i in range(1, n):
-                print vis
+            for i in range(0, n):
                 if(vis[i]==0):
                     vis[i] = 1
                     nums[first] = i
@@ -27,6 +26,7 @@ class Solution(object):
                     vis[i] = 0
                 
         vis=[0 for i in nums]
+        vis.append(0)
         n = len(nums)
         res = []
         dfs(0,vis)

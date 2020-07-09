@@ -19,7 +19,6 @@ class Solution(object):
         result=""
         pre = 0
         for i in str:
-            print len(result)
             if pre==1:break
             if i in syl:
                 print i,len(result)
@@ -29,12 +28,13 @@ class Solution(object):
                     result+=i
             else:
                 break
-        print result
         try:
-            if int(result)>2147483648:return -2147483648
+            if int(result)<-2147483648:return -2147483648
+            print int(result)
+            if int(result)>=2147483648:return 2147483647
             return int(result)
         except :
-            return 0
+            return result
         
 # @lc code=end
 

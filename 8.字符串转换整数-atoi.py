@@ -13,20 +13,25 @@ class Solution(object):
         """
         if not str:return 0
         syl = ["+","-","0","1","2",
-        "3","4","5","6","7","8","9"
+        "3","4","5","6","7","8","9"," "
         ]
-        if str[0] not in syl+[" "]:return 0
+        if str[0] not in syl:return 0
         result=""
         pre = 0
         for i in str:
+            print len(result)
+            if pre==1:break
             if i in syl:
-                if pre=0
-                    result +=i
+                print i,len(result)
+                if pre==0 and i==" ":
+                    if len(result)!=0:pre=1
+                else:
+                    result+=i
             else:
                 break
         print result
         try:
-            if abs(int(result))>2**32:return -2147483648
+            if int(result)>2147483648:return -2147483648
             return int(result)
         except :
             return 0

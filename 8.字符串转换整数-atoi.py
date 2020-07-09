@@ -46,6 +46,7 @@ class Solution(object):
         automaton = Automaton()
         for c in str:
             automaton.get(c)
+        print automaton.sign,automaton.ans
         return automaton.sign * automaton.ans
 
 

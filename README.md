@@ -8,7 +8,7 @@ import ！！！！ 《《组合总和 II
 ```
 2. 双指针 判断回文字符串
 3. 滑动窗口 无重复字符的最长子串
-4. 有限状态机（Finite-state machine, FSM）  字符串转换整数 (atoi)
+4. [有限状态机（Finite-state machine, FSM)](https://leetcode-cn.com/problems/string-to-integer-atoi/solution/zi-fu-chuan-zhuan-huan-zheng-shu-atoi-by-leetcode-/)  字符串转换整数 (atoi)
 
 ### 面试面试常见知识点的考察频率及大厂考察要点。
 

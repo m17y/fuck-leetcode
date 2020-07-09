@@ -31,16 +31,17 @@ class Solution(object):
                         minus+=1
                     if i =="+":
                         plug+=1
+                    if minus==2 or plug==2:break
                     result+=i
             else:
                 break
+        print result
         try:
             if int(result)<-2147483648:return -2147483648
             print int(result)
             if int(result)>=2147483648:return 2147483647
             return int(result)
         except :
-            if 
             return 0
         
 # @lc code=end

@@ -18,13 +18,19 @@ class Solution(object):
         if str[0] not in syl:return 0
         result=""
         pre = 0
+        minus = 0
+        plug = 0
         for i in str:
             if pre==1:break
             if i in syl:
                 print i,len(result)
-                if pre==0 and i==" ":
+                if pre==0 and i in (" "):
                     if len(result)!=0:pre=1
                 else:
+                    if i =="-":
+                        minus+=1
+                    if i =="+":
+                        plug+=1
                     result+=i
             else:
                 break
@@ -34,7 +40,8 @@ class Solution(object):
             if int(result)>=2147483648:return 2147483647
             return int(result)
         except :
-            return result
+            if 
+            return 0
         
 # @lc code=end
 

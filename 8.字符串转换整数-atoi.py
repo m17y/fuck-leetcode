@@ -18,8 +18,7 @@ class Solution(object):
         if str[0] not in syl:return 0
         result=""
         pre = 0
-        minus = 0
-        plug = 0
+        fh = 0
         for i in str:
             if pre==1:break
             if i in syl:
@@ -27,11 +26,10 @@ class Solution(object):
                 if pre==0 and i in (" "):
                     if len(result)!=0:pre=1
                 else:
-                    if i =="-":
-                        minus+=1
-                    if i =="+":
-                        plug+=1
-                    if minus==2 or plug==2:break
+                    if i =="-" or i=="+":
+                        fh+=1
+                    if len(result)>0 and (i =="-" or i=="+"):fh+=1
+                    if fh==2:break
                     result+=i
             else:
                 break

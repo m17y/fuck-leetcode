@@ -11,5 +11,11 @@ class Solution(object):
         :type str: str
         :rtype: int
         """
+        syl = ["+","-","0","1","2"
+        "3","4","5","6","7","8","9"
+        ]
+        if str[0] not in syl:return 0
+        
+        for i in str:
 # @lc code=end
 

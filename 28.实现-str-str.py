@@ -12,7 +12,8 @@ class Solution(object):
         :type needle: str
         :rtype: int
         """
-                L, n = len(needle), len(haystack)
+        # kmp匹配算法（http://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html）
+        L, n = len(needle), len(haystack)
 
         for start in range(n - L + 1):
             if haystack[start: start + L] == needle:

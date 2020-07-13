@@ -12,5 +12,12 @@ class Solution(object):
         :type needle: str
         :rtype: int
         """
+                L, n = len(needle), len(haystack)
+
+        for start in range(n - L + 1):
+            if haystack[start: start + L] == needle:
+                return start
+        return -1
+
 # @lc code=end
 

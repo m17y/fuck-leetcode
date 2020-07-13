@@ -5,7 +5,7 @@
 import ！！！《组合总和 II》手撕代码
 [bilibili 视频](https://www.bilibili.com/video/BV1b7411E7tk?from=search&seid=13295465887991236761)
 ```
-2. 双指针 判断回文字符串
+2. 双指针 判断回文字符串 [双指针类型](https://www.cnblogs.com/bonelee/p/11789330.html)
 3. 滑动窗口 无重复字符的最长子串
 4. [有限状态机（Finite-state machine, FSM)](https://leetcode-cn.com/problems/string-to-integer-atoi/solution/zi-fu-chuan-zhuan-huan-zheng-shu-atoi-by-leetcode-/)  字符串转换整数 (atoi) https://www.cnblogs.com/21207-iHome/p/6085334.html
 
@@ -30,7 +30,4 @@ import ！！！《组合总和 II》手撕代码
 4. 排序
 5. 减少循环 i-1
 
-### 双指针
-[双指针类型](https://www.cnblogs.com/bonelee/p/11789330.html)
-![](2020-06-30-21-08-32.png)
-![](2020-06-30-21-10-10.png)
+

@@ -11,15 +11,18 @@ class Solution(object):
         :type n: int
         :rtype: str
         """
-        result = "1"
+        result = 1
         for i in range(2,n+1):
-            z,p="",0
+            m={}
             for j in str(result):
-                z=
+                print j,m.keys()
+                if j not in m.keys():
+                    for k,v in m.items():
+                        str(result)+str(v)+k
+                    m={}
                 m.setdefault(j,0)
                 m[j] += 1
-            for k,v in m.items():
-                result+str(v)
-            result = 
+
+        return str(result)
         # @lc code=end
 

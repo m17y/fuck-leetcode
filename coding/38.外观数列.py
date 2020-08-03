@@ -16,9 +16,13 @@ class Solution(object):
         for i in range(2,n+1):
             for j in str(result):
                 if j!=m[0]:
-                    str(result)+str(m[1])+str(m[0])
+                    result = str(result)+str(m[1])+str(m[0])
+                    m[0]=j
+                    m[1] = 1
                 else:
                     m[1] += 1
+            print result,m
+            result = str(result)+str(m[1])+str(m[0])
 
         return str(result)
         # @lc code=end

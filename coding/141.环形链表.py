@@ -20,13 +20,26 @@ class Solution(object):
         a=[]
         status = False
         while head:
-            if head.next in a: 
+            if head in a: 
                 status = True 
                 break
-            
+            a.append(head)
             head=head.next
 
         return status
+
+        # 快慢指针 66666
+        slow = head
+        fast = head
+        while slow and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if not fast:
+                return False
+            if slow == fast:
+                return True
+        return False
+
     
         
         

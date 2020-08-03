@@ -13,8 +13,9 @@ class Solution(object):
         """
         l = len(nums)
         if l==0: return 0
-        max = nums[0]
+        ma = nums[0]
         for i in range(1,l):
-            for j in rang(i+1,)
+                ma = max(ma+nums[i],ma)
+        return ma
 # @lc code=end
 

@@ -17,6 +17,18 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
+        a=[]
+        status = False
+        while head:
+            if head.next in a: 
+                status = True 
+                break
+            
+            head=head.next
+
+        return status
+    
+        
         
 # @lc code=end
 

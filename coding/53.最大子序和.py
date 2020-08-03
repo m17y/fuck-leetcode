@@ -14,7 +14,7 @@ class Solution(object):
         l = len(nums)
         if l==0: return 0
         dp = [0 for i in nums]
-        dp[0] = [nums[0]]
+        dp[0] = nums[0]
         for i in range(1,l):
             print nums[i]
             dp[i] = max(dp[i-1]+nums[i],nums[i])

@@ -12,16 +12,13 @@ class Solution(object):
         :rtype: str
         """
         result = 1
+        m=["",""]
         for i in range(2,n+1):
-            m={}
             for j in str(result):
-                print j,m.keys()
-                if j not in m.keys():
-                    for k,v in m.items():
-                        str(result)+str(v)+k
-                    m={}
-                m.setdefault(j,0)
-                m[j] += 1
+                if j!=m[0]:
+                    str(result)+str(m[1])+str(m[0])
+                else:
+                    m[1] += 1
 
         return str(result)
         # @lc code=end

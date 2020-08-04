@@ -73,9 +73,13 @@ class Solution(object):
             fast = fast.next
             slow = slow.next
         #核心
+        print head
+        print fast,slow
         fast.next = head
-        head = slow.next
-        slow.next = None
+        print head
+        # head = slow.next
+        # slow.next = None
+        # print head
         return head
 
 # @lc code=end

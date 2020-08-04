@@ -25,8 +25,9 @@ class Solution(object):
                 hexd.next=newhead
                 newhead = head
             else:
-                newhead.next=head
+                newhead.next=head.next
                 head = head.next
+                k-=1
 
 # @lc code=end
 

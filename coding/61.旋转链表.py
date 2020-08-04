@@ -12,6 +12,13 @@
 #         self.next = None
 
 class Solution(object):
+    def length(self,head): #计算链表长度
+        num = 0;
+        node = head;
+        while node:
+            num+=1
+            node = node.next
+        return num
     def rotateRight(self, head, k):
         """
         :type head: ListNode
@@ -19,11 +26,7 @@ class Solution(object):
         :rtype: ListNode
         """
         th = head
-        l=0
-        while th:
-            l+=1
-            th = th.next
-        print l
+        l=length(head)
         if k==0 or head==None or l==1 or k%l==0: return head
 
         index = l-k if (k<l) else l-k%l
@@ -51,7 +54,34 @@ class Solution(object):
 
         print newpre
         return newpre
+    # def length(self,head): #计算链表长度
+    #     num = 0;
+    #     node = head;
+    #     while node:
+    #         num+=1
+    #         node = node.next
+    #     return num
+    # def rotateRight(self, head, k):
+    #     """
+    #     :type head: ListNode
+    #     :type k: int
+    #     :rtype: ListNode
+    #     """
 
+    #     fast = slow = head #建立快慢指针
+    #     if self.length(head)==0:
+    #         return head
+    #     leng = k%self.length(head)
+    #     for i in range(leng):
+    #         fast = fast.next
+    #     while fast.next:
+    #         fast = fast.next
+    #         slow = slow.next
+    #     #核心
+    #     fast.next = head
+    #     head = slow.next
+    #     slow.next = None
+    #     return head
 
 # @lc code=end
 

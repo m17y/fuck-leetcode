@@ -18,5 +18,8 @@ class Solution(object):
         :type k: int
         :rtype: ListNode
         """
+        pre=head
+        while head:
+            
 # @lc code=end
 

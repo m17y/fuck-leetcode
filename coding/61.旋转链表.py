@@ -78,9 +78,18 @@ class Solution(object):
         fast.next = head
         print head.val
         head = slow.next
-        print head.val
+        print slow.val
         slow.next = None
         # print head
+        # 快慢指针先形成环，然后再断开环
+        # ListNode{val: 1, next: ListNode{val: 2, next: ListNode{val: 3, next: ListNode{val: 4, next: ListNode{val: 5, next: None}}}}}
+        # ' +
+        # 'ListNode{val: 5, next: None} ListNode{val: 3, next: ListNode{val: 4, next: ListNode{val: 5, next: None}}}
+        # ' +
+        # '1
+        # ' +
+        # '3
+
         return head
 
 # @lc code=end

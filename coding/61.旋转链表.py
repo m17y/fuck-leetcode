@@ -18,8 +18,16 @@ class Solution(object):
         :type k: int
         :rtype: ListNode
         """
+        th = head
+        l=0
+        while th:
+            l+=1
+            th = th.next
+        print l
+        index = l-k if (k<l) else l%k
+        print index
         newhead=head
-        while head and k!=0:
+        while head and index!=0:
             if head.next:
                 newhead.next=head.next
                 head = head.next
@@ -28,7 +36,7 @@ class Solution(object):
                 tmp.next=newhead
                 newhead = tmp
                 head = newhead
-                k-=1
+                index-=1
         return newhead
 
 

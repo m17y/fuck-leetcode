@@ -27,15 +27,19 @@ class Solution(object):
         index = l-k if (k<l) else l%k
         print index
         pre = head
+        newpre = None
         while head and index!=0:
 
-            head = head.next
-            h = head.next
+            newpre = head.next
             index-=1
             if index==0:
                 head.next=None
+            head = head.next
 
-        print pre
+        print newpre,pre
+        pre = newpre
+        while newpre:
+            if newpre.next
         return pre
 
 

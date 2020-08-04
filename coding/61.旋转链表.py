@@ -18,13 +18,14 @@ class Solution(object):
         :type k: int
         :rtype: ListNode
         """
+        if k==0 or head==None: return head
         th = head
         l=0
         while th:
             l+=1
             th = th.next
         print l
-        index = l-k if (k<l) else l%k
+        index = l-k if (k<l) else l-k%l
         print index
         pre = head
         newpre = None
@@ -36,12 +37,12 @@ class Solution(object):
                 head.next=None
             head = head.next
 
-        # print newpre,pre
+        print newpre,pre
         tpre = newpre
         while newpre:
             tmp = newpre
             newpre = newpre.next
-            if newpre.next==None:
+            if tmp.next==None:
                 tmp.next = pre
         print tpre
         return tpre

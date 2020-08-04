@@ -26,7 +26,8 @@ class Solution(object):
         :rtype: ListNode
         """
         th = head
-        l=length(head)
+        l=self.length(head)
+
         if k==0 or head==None or l==1 or k%l==0: return head
 
         index = l-k if (k<l) else l-k%l

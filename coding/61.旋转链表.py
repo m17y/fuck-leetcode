@@ -19,7 +19,7 @@ class Solution(object):
         :rtype: ListNode
         """
         newhead=head
-        while head:
+        while head and k!=0:
             if head.next:
                 newhead.next=head.next
                 head = head.next

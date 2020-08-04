@@ -18,8 +18,15 @@ class Solution(object):
         :type k: int
         :rtype: ListNode
         """
-        pre=head
+        newhead=head
         while head:
-            
+            if !head.next:
+                tmp = head
+                hexd.next=newhead
+                newhead = head
+            else:
+                newhead.next=head
+                head = head.next
+
 # @lc code=end
 

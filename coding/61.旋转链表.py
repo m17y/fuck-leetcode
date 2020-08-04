@@ -36,11 +36,15 @@ class Solution(object):
                 head.next=None
             head = head.next
 
-        print newpre,pre
-        pre = newpre
+        # print newpre,pre
+        tpre = newpre
         while newpre:
-            if newpre.next
-        return pre
+            tmp = newpre
+            newpre = newpre.next
+            if newpre.next==None:
+                tmp.next = pre
+        print tpre
+        return tpre
 
 
 # @lc code=end

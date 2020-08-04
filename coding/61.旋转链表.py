@@ -20,14 +20,17 @@ class Solution(object):
         """
         newhead=head
         while head:
-            if !head.next:
-                tmp = head
-                hexd.next=newhead
-                newhead = head
-            else:
+            if head.next:
                 newhead.next=head.next
                 head = head.next
+            else:
+                tmp = head
+                tmp.next=newhead
+                newhead = tmp
+                head = newhead
                 k-=1
+        return newhead
+
 
 # @lc code=end
 

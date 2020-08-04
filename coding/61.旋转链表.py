@@ -76,9 +76,10 @@ class Solution(object):
         print head
         print fast,slow
         fast.next = head
-        print head
-        # head = slow.next
-        # slow.next = None
+        print head.val
+        head = slow.next
+        print head.val
+        slow.next = None
         # print head
         return head
 

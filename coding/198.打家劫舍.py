@@ -15,7 +15,9 @@ class Solution(object):
         dp[0] = nums[0]
         l = len(nums)
         for i in range(1,l-1):
-            dp[i] =max(dp[i-1]+dp[i+1],dp[i])
+            print dp[i-1],nums[i+1],nums[i]
+            dp[i+1] =max(dp[i-1]+nums[i+1],nums[i])
+            dp[i]
         print dp
         return dp[-1]
 # @lc code=end

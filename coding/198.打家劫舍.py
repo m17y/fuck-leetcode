@@ -11,14 +11,17 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        if len(nums)<=0:return 0
+        if not nums:
+            return 0
+
+        size = len(nums)
+        if size == 1:
+            return nums[0]
         dp = [0 for i in nums]
         dp[0] = nums[0]
-        l = len(nums)
-        for i in range(1,l-1):
-            print dp[i-1],nums[i+1],nums[i]
-            dp[i+1] =max(dp[i-1]+nums[i+1],dp[i])
-            dp[i]
+        dp[1] = max(nums[0],nums[1])
+        for i in range(2,size):
+            dp[i] =max(dp[i-2]+nums[i],dp[i-1])
         print dp
         return max(dp)
 # @lc code=end

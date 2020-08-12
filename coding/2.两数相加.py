@@ -19,7 +19,14 @@ class Solution(object):
         :rtype: ListNode
         """
         origin=ListNode(0)
-        while
+
+        while l1 and l2:
+            origin.next = ListNode(l1.val+l2.val)
+            l1 = l1.next
+            l2 = l2.next
+            origin = origin.next
+        return origin.next
+            
         
 # @lc code=end
 

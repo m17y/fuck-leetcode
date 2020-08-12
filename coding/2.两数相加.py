@@ -18,7 +18,8 @@ class Solution(object):
         :type l2: ListNode
         :rtype: ListNode
         """
-        pass
+        origin=ListNode(0)
+        while
         
 # @lc code=end
 

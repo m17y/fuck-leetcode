@@ -19,13 +19,27 @@ class Solution(object):
         :rtype: ListNode
         """
         origin=ListNode(0)
-
-        while l1 and l2:
-            origin.next = ListNode(l1.val+l2.val)
+        a=0
+        pre = origin
+        ll1=self.len(l1)
+        ll2=self.len(l2)
+        if l11<ll2:
+            l1,l2=l2,l1
+        while l1 and a!=0:
+            print l1.val,l2.val
+            if l1.val+l2.val+a>=10:
+                origin.next = ListNode(l1.val+l2.val+a-10)
+                a=1
+            else:
+                origin.next = ListNode(l1.val+l2.val+a)
+                a=0
             l1 = l1.next
             l2 = l2.next
             origin = origin.next
-        return origin.next
+        if a==1:
+            origin.next = ListNode(1)  
+
+        return pre.next
             
         
 # @lc code=end

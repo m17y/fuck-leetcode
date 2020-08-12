@@ -18,6 +18,7 @@ class Solution(object):
         :type l2: ListNode
         :rtype: ListNode
         """
+        # TODO xk
         origin=ListNode(0)
         a=0
         pre = origin

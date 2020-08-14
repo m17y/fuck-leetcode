@@ -22,7 +22,8 @@ class Solution(object):
                     print nums[i],nums[j]
                 
                 c = 0-(nums[i]+nums[j])
-                if nums[j+1]>c:break
+
+                if j<=l-2 and nums[j+1]<c:break
                 if c in nums[j+1:]:
                     _=sorted([nums[i],nums[j],c],reverse = False)
                     if _ not in result:

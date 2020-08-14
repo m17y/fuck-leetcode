@@ -11,14 +11,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[List[int]]
         """
-        0 1 2 -1 -1 -4
         result = []
         nums = sorted(nums)
         l = len(nums)
-        for i in range(l)
+        for i in range(l):
             for j in (i+1,l):
                 c = 0-(i+j)
-                if c
+                if c<j:break
                 if c in nums[j:]:
                     result.append([i,j,c])
         return result

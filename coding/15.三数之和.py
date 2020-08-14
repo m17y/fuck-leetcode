@@ -12,26 +12,28 @@ class Solution(object):
         :rtype: List[List[int]]
         """
         # 超出时间限制
-        # result = []
-        # nums = sorted(nums,reverse = True)
-        # print nums
-        # l = len(nums)
-        # for i in range(l-1):
-        #     for j in range(i+1,l):
-        #         if i==2:
-        #             print nums[i],nums[j]
+        result = []
+        nums = sorted(nums,reverse = True)
+        print nums
+        l = len(nums)
+        for i in range(l-1):
+            for j in range(i+1,l):
+                if i==2:
+                    print nums[i],nums[j]
                 
-        #         c = 0-(nums[i]+nums[j])
-        #         if c in nums[j+1:]:
-        #             _=sorted([nums[i],nums[j],c],reverse = False)
-        #             if _ not in result:
-        #                 result.append(_)
-        # return result
+                c = 0-(nums[i]+nums[j])
+                if nums[j+1]>c:break
+                if c in nums[j+1:]:
+                    _=sorted([nums[i],nums[j],c],reverse = False)
+                    if _ not in result:
+                        result.append(_)
+        return result
         #
         ##双指针:
         ##先排序
         ##[-4, -1, -1, 0, 1, 2]
         ##固定, 👆,   , ,  , 👆
-        c-k
+        # 0 - -4 -> -1+2?= 4
+        # <则固定位置右边移动 左右指针友移动
 # @lc code=end
 

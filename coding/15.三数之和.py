@@ -27,5 +27,11 @@ class Solution(object):
         #             if _ not in result:
         #                 result.append(_)
         # return result
+        #
+        ##双指针:
+        ##先排序
+        ##[-4, -1, -1, 0, 1, 2]
+        ##固定, 👆,   , ,  , 👆
+        c-k
 # @lc code=end
 

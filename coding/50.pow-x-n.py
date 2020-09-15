@@ -12,7 +12,7 @@ class Solution(object):
         :type n: int
         :rtype: float
         """
-        left ,right = 0,n
-        while
+        def quickmul(N):
+            ans = 1.0
 # @lc code=end
 

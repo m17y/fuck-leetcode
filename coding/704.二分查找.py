@@ -13,11 +13,11 @@ class Solution(object):
         :rtype: int
         """
         left,right = 0,len(nums)-1
-        while left<right:
+        while left<=right:
             half = left+(right-left)//2
             if nums[half]>target:
                 right = half-1
-            elif nums[half]==target::
+            elif nums[half]==target:
                 return half
             else:
                 left = half+1

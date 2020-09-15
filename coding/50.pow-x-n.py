@@ -13,16 +13,14 @@ class Solution(object):
         :rtype: float
         """
         def quickMul(N):
-            ans = 1.0
-            x_contribute = x
-            while N > 0:
-                if N % 2 == 1:
-                    ans *= x_contribute
-                x_contribute *= x_contribute
-                N = N//2
-            return ans
+            if N == 0:
+                return 1.0
+            y = quickMul(N // 2)
+            return y * y if N % 2 == 0 else y * y * x
         
         return quickMul(n) if n >= 0 else 1.0 / quickMul(-n)
+
+
 
 # @lc code=end
 

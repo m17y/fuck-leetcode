@@ -21,6 +21,7 @@ class Solution(object):
                 return half
             else:
                 left = half+1
+        return -1
 
 # @lc code=end
 

@@ -19,7 +19,7 @@ class Solution(object):
                 if N % 2 == 1:
                     ans *= x_contribute
                 x_contribute *= x_contribute
-                N //= 2
+                N = N//2
             return ans
         
         return quickMul(n) if n >= 0 else 1.0 / quickMul(-n)
